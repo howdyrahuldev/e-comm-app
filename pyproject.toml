@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "e-commerse-application"
+version = "0.1.0"
+description = ""
+authors = ["Rahuldev Sarkar <email.rahuldev@gmail.com>"]
+readme = "README.md"
+
+packages = [
+    {include = "e_comm_app", from = "src"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flask-sqlalchemy = "^3.1.1"
+fastapi = "^0.115.3"
+alembic = "^1.13.3"
+uvicorn = "^0.32.0"
+black = "^24.10.0"
+loguru = "^0.7.2"
+sqlalchemy = "^2.0.36"
+pydantic = "^2.9.2"
+pyjwt = "^2.9.0"
+passlib = "^1.7.4"
+bcrypt = "^4.2.0"
+python-multipart = "^0.0.12"
+cryptography = "^43.0.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-asyncio = "^0.24.0"
+httpx = "^0.27.2"
+ruff = "^0.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+line-length = 88  # or your preferred line length
+select = ["I", "F"]    # Ensure import-related checks are included
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+pythonpath = [
+    "src"
+]
