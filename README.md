@@ -46,7 +46,6 @@ This is a RESTful API built with FastAPI for managing products in an e-commerce 
 
 To start the FastAPI server, run:
 
-    ```bash
     poetry run uvicorn src.e_comm_app.app.main:app --reload
 
 The API will be accessible at http://127.0.0.1:8082.
